@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backend:
+    # Build the image from the Dockerfile in the current directory (.)
+    build: .
+    # Name the container for easier identification
+    container_name: musicbox-api-server
+    # Map port 3001 on the host to port 3001 in the container
+    ports:
+      - "3001:3001"
+    # Mount the local server.js file into the container.
+    # This allows for code changes without rebuilding the image (just restart the container).
+    volumes:
+      - ./server.js:/usr/src/app/server.js
+    # Automatically restart the container if it stops, unless manually stopped.
+    restart: unless-stopped

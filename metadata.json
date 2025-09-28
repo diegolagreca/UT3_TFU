@@ -1,0 +1,5 @@
+{
+  "name": "Musicbox - Playlist Manager",
+  "description": "A sleek and modern web application to manage your personal song library and create custom playlists. This frontend connects to a powerful backend to organize your music seamlessly.",
+  "requestFramePermissions": []
+}
